@@ -7,6 +7,23 @@
   padding: 10vmin;
 }
 
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+ nav a {
+   display: inline-block;
+   padding: 12px;
+   text-decoration: none;
+   color: #61dafb;
+   font-weight: bold;
+   font-size: 1.5rem;
+ }
+ nav a:hover {
+   color: #4cacc7;
+ }
+
 .App-logo {
   height: 20vmin;
   pointer-events: none;
@@ -27,9 +44,15 @@ button {
   border: none;
   cursor: pointer;
 }
-
 button:hover {
   background-color: #4cacc7;
+}
+
+.toggle-favorite-button {
+  background-color: pink;
+}
+.toggle-favorite-button:hover {
+  background-color: rgb(221, 166, 175);
 }
 
 .card-container {
