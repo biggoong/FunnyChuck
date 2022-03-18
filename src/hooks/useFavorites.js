@@ -16,9 +16,11 @@ export const useFavorites = () => {
     }, []);
 
     const handleAddToFavorite = (favorites) => {
-        saveState('favs', [...favJokes, favorites]);
-        setFavJokes([...favJokes, favorites]);
-        setFavIds([...favIds, favorites.id]);
+        if (favIds && favIds.length < 10 && !favIds.includes(favorites.id)) {
+            saveState('favs', [favorites, ...favJokes]);
+            setFavJokes([favorites, ...favJokes]);
+            setFavIds([favorites.id, ...favIds]);
+        }
     };
 
     const handleRemoveFavorite = (favorites) => {

@@ -24,6 +24,7 @@ export const MainPage = () => {
             <Header
                 src="https://images01.military.com/sites/default/files/styles/full/public/2021-04/chucknorris.jpeg"
                 title="Hey, let's have some fun!"
+                buttonTitle="get jokes"
                 onButtonClick={handleGetJokes}
             />
 
@@ -35,7 +36,8 @@ export const MainPage = () => {
                         joke={joke.joke}
                         onAdd={() => handleAddToFavorite(joke)}
                         onRemove={() => handleRemoveFavorite(joke)}
-                        isFav={favIds.includes(joke.id)} />
+                        isFav={favIds.includes(joke.id)}
+                    />
                 ))}
             </section>
         </>
