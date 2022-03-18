@@ -11,6 +11,7 @@ export const FavoritesPage = () => {
 
     let timeout;
 
+    // Looking for on to turn on setTimeout
     useEffect(() => {
         if (on) {
             timeout = setTimeout(() => {
@@ -26,6 +27,7 @@ export const FavoritesPage = () => {
         }
     }, [on, count]);
 
+    // If count up to 5s fetch and add 1 joke
     useEffect(async () => {
         if (count === 5) {
             try {
@@ -41,6 +43,7 @@ export const FavoritesPage = () => {
         }
     }, [count]);
 
+    // If jokes is 10 turn off the button
     useEffect(() => {
         if (favJokes.length === 10) {
             setOn(false);
